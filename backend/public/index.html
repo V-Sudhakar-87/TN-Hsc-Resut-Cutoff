@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TN Result Hub</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+
+ <header class="header">
+
+  <div class="header-content">
+
+    <div class="header-left">
+
+      <img
+        src="image/images.png"
+        alt="TN Logo"
+        class="logo"
+      />
+
+      <div class="header-text">
+
+        <h1>
+          Tamil Nadu HSC Results Portal
+        </h1>
+
+        <p>
+          Result & Cutoff Calculator
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+  <!-- FORM -->
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>Get Your Result</h2>
+
+      <div class="input-group">
+
+        <label>Register Number</label>
+
+        <input
+          type="text"
+          id="regno"
+          placeholder="Enter Register Number"
+        />
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Date of Birth</label>
+
+        <input type="date" id="dob" />
+
+      </div>
+
+      <button id="getBtn">
+        Get Marks
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- LOADING -->
+
+  <div class="loading hidden" id="loading">
+
+    <div class="loader"></div>
+
+    <p>Fetching Result...</p>
+
+  </div>
+
+  <!-- RESULT -->
+
+  <div class="result-container hidden" id="resultContainer">
+
+    <div class="result-card">
+
+      <!-- BACK BUTTON -->
+
+      <button id="backBtn" class="back-btn">
+        ← Back
+      </button>
+
+      <!-- TOP -->
+
+      <div class="top">
+
+        <div>
+
+          <p class="small">
+            Student Name
+          </p>
+
+          <h2 id="studentName"></h2>
+
+        </div>
+
+        <div>
+
+          <p class="small">
+            Register No
+          </p>
+
+          <h3 id="studentReg"></h3>
+
+        </div>
+
+      </div>
+
+      
+
+      <!-- TABLE -->
+
+      <table>
+
+        <thead>
+
+         <tr>
+
+  <th>Subject</th>
+
+  <th>Internal</th>
+
+  <th>Theory</th>
+
+  <th>Practical</th>
+
+  <th>Total</th>
+
+  <th>Result</th>
+
+</tr>
+
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+
+      </table>
+
+      <!-- CUT OFF -->
+
+     <div class="cutoff-box" id="cutoffBox">
+
+</div>
+<div class="download-section">
+
+  <button id="downloadBtn">
+
+    Download PDF
+
+  </button>
+
+</div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+
+   <p>
+
+      © 2026 Tamil Nadu HSC Results Portal.
+      All Rights Reserved.
+
+   </p>
+
+</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
