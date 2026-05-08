@@ -23,13 +23,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname,"public")));
 /* HOME */
 
-app.get("/", (req,res)=>{
 
-   res.send(
-      "TN Result Backend Running"
-   );
-
-});
 
 /* API */
 
