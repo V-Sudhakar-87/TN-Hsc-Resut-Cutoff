@@ -396,6 +396,8 @@ downloadBtn.addEventListener(
 
       downloadBtn.style.display =
       "none";
+      backBtn.style.display =
+"none";
 
       // WAIT UI UPDATE
 
@@ -409,10 +411,12 @@ downloadBtn.addEventListener(
       document.querySelector(
          ".result-card"
       );
+      element.classList.add("pdf-mode");
+      element.style.maxWidth = "760px";
 
       const options = {
 
-         margin:0.3,
+         
 
          filename:
          "TN_Result.pdf",
@@ -422,16 +426,19 @@ downloadBtn.addEventListener(
             quality:1
          },
 
-         html2canvas:{
-            scale:3,
-            scrollY:0
-         },
+        html2canvas:{
+   scale:3,
+   scrollY:0,
+   useCORS:true,
+   windowWidth: document.body.scrollWidth
+  
+},
 
          jsPDF:{
             unit:"in",
             format:"a4",
             orientation:"portrait"
-         }
+         },
 
       };
 
@@ -441,7 +448,10 @@ downloadBtn.addEventListener(
       .save();
 
       // SHOW BUTTON
-
+      element.classList.remove("pdf-mode");
+      element.style.maxWidth = "850px";
+      backBtn.style.display =
+"block";
       downloadBtn.style.display =
       "block";
 

@@ -230,7 +230,7 @@ else{
 
                ) / 2
 
-            ).toFixed(2);
+            ).toFixed(1);
 
             result.cutoff =
             engCutoff;
@@ -258,7 +258,7 @@ else{
 
                ) / 2
 
-            ).toFixed(2);
+            ).toFixed(1);
 
             result.medicalCutoff =
             medCutoff;

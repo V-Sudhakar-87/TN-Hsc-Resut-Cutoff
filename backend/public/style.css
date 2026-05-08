@@ -240,7 +240,7 @@ body{
   border:1px solid #dce5ef;
 
   overflow:hidden;
-
+  padding-bottom:40px;
   box-shadow:0 10px 30px rgba(0,0,0,0.04);
 }
 
@@ -761,39 +761,321 @@ table tbody tr:hover{
 
 .footer{
 
-  width:100%;
+    width:100%;
 
-  text-align:center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
 
-  padding:18px 14px;
+    text-align:center;
 
-  background:white;
+    padding:18px 12px;
 
-  border-top:
-  1px solid #dbe4ee;
+    border-top:3px solid #facc15;
 
- margin-top:auto;
+    box-sizing:border-box;
+
+    margin-top:18px;
 }
 
-.footer p{
+.footer h2{
 
-  color:#6b7280;
+    color:white;
 
-  font-size:14px;
+    font-size:20px;
 
-  line-height:1.5;
-}
-@media(max-width:768px)
-{
-  .footer{
+    font-weight:800;
 
-   margin-top:auto;
+    margin:0;
 
-   padding:14px 10px;
+    line-height:1.2;
 }
 
-.footer p{
+.footer h3{
+
+    color:#cbd5e1;
+
+    font-size:12px;
+
+    margin-top:3px;
+
+    font-weight:600;
+}
+
+.footer-logos{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:12px 0 8px;
+
+    flex-wrap:wrap;
+}
+
+.footer-logos img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+    background:white;
+
+    padding:3px;
+
+    border-radius:8px;
+}
+
+.admission-contact{
+
+    color:#facc15;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    margin-top:4px;
+}
+
+.copyright{
+
+    margin-top:8px;
+
+    color:#94a3b8;
+
+    font-size:10px;
+
+    line-height:1.4;
+}
+/* MOBILE */
+
+@media(max-width:768px){
+
+.footer{
+
+    padding:28px 14px;
+}
+
+.footer h2{
+
+    font-size:22px;
+
+    line-height:1.4;
+}
+
+.footer h3{
+
+    font-size:15px;
+}
+
+.footer-logos{
+
+    gap:14px;
+
+    margin:20px 0;
+}
+
+.footer-logos img{
+
+    width:65px;
+
+    height:65px;
+
+    padding:6px;
+
+    border-radius:12px;
+}
+
+.admission-contact{
+
+    font-size:17px;
+
+    line-height:1.5;
+}
+
+.copyright{
+
+    font-size:12px;
+}
+
+}
+.pdf-mode .top{
+
+   padding:16px;
+}
+
+.pdf-mode .top h2{
+
+   font-size:22px;
+}
+
+.pdf-mode .top h3{
+
+   font-size:20px;
+}
+
+.pdf-mode table th{
+
+   padding:9px;
+
+   font-size:13px;
+}
+
+.pdf-mode table td{
+
+   padding:9px;
 
    font-size:12px;
 }
+
+.pdf-mode .cutoff-box{
+
+   padding:16px;
+
+   gap:10px;
+}
+
+.pdf-mode .box{
+
+   padding:16px;
+}
+
+.pdf-mode .box h1{
+
+   font-size:24px;
+}
+
+.pdf-mode .box h2{
+
+   font-size:20px;
+}
+
+.pdf-mode .download-section{
+
+   padding:14px;
+}
+
+.pdf-mode .footer{
+
+   padding:8px 6px;
+}
+
+.pdf-mode .footer h2{
+
+   font-size:16px;
+}
+
+.pdf-mode .footer h3{
+
+   font-size:10px;
+}
+
+.pdf-mode .footer-logos img{
+
+   width:30px;
+   height:30px;
+}
+
+.pdf-mode .admission-contact{
+
+   font-size:12px;
+}
+
+.pdf-mode .copyright{
+
+   font-size:8px;
+
+   margin-top:4px;
+}
+.pdf-mode{
+
+   transform: scale(1.03);
+
+   transform-origin: top center;
+
+   width:100%;
+
+   margin:0 auto;
+   padding-top:100px;
+}
+/* LAST FOOTER */
+
+body > .footer:last-of-type{
+
+    width:100%;
+
+   background:#cfdceb;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    padding:18px 20px;
+
+    text-align:center;
+}
+
+/* DEVELOPER TEXT */
+
+body > .footer:last-of-type .developer-footer{
+
+    color:#334155;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    font-weight:500;
+}
+
+/* HIGHLIGHT */
+
+body > .footer:last-of-type .developer-footer span{
+
+    color:#0f3d68;
+
+    font-weight:700;
+}
+
+/* COPYRIGHT */
+
+body > .footer:last-of-type .copyright{
+
+    margin-top:10px;
+
+     color:#475569;
+
+    font-size:12px;
+
+    letter-spacing:0.5px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+body > .footer:last-of-type{
+
+    padding:20px 10px;
+    margin-top:auto;
+}
+
+body > .footer:last-of-type .developer-footer{
+
+    font-size:11px;
+
+    line-height:1.8;
+}
+
+body > .footer:last-of-type .copyright{
+
+    font-size:10px;
+}
+
 }
