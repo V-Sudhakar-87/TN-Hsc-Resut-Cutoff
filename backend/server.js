@@ -153,6 +153,28 @@ app.post(
 
          );
 
+         const zoology =
+result.subjects.find(
+
+   s =>
+
+   s.subject
+   .toLowerCase()
+   .includes("zoo")
+
+);
+
+const botany =
+result.subjects.find(
+
+   s =>
+
+   s.subject
+   .toLowerCase()
+   .includes("bot")
+
+);
+
          /* TOTAL */
 
          const totalMarks =
@@ -239,31 +261,57 @@ else{
 
          /* MEDICAL CUTOFF */
 
-         if(
-            !result.fail &&
-            biology &&
-            physics &&
-            chemistry
+         if(!result.fail &&physics &&chemistry &&
+            (biology ||(zoology && botany))){
 
-         ){
+           let medCutoff;
 
-            const medCutoff = (
+   // BIOLOGY STUDENTS
 
-               biology.total +
+   if(biology){
 
-               (
+      medCutoff = Number(
 
-                  physics.total +
-                  chemistry.total
+         (
 
-               ) / 2
+            biology.total +
 
-            ).toFixed(1);
+            (
 
-            result.medicalCutoff =
-            medCutoff;
+               physics.total +
+               chemistry.total
 
-         }
+            ) / 2
+
+         ).toFixed(1)
+
+      );
+
+   }
+
+   // BOTANY + ZOOLOGY STUDENTS
+
+   else{
+
+      medCutoff = Number(
+
+         (
+
+            botany.total +
+            zoology.total +
+            physics.total +
+            chemistry.total
+
+         ) / 2
+
+      ).toFixed(1);
+
+   }
+
+   result.medicalCutoff =
+   medCutoff;
+
+}
 
          /* SAVE CACHE */
 
